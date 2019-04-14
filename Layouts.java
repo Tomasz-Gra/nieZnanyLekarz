@@ -12,10 +12,25 @@ class Layouts extends Variables {
         frame.setVisible(true);
     }
 
+    void drawLoginScreen() {
+        username.setBounds(10, 10, 300, 30);
+        password.setBounds(10,55, 300, 30);
+        submit.setBounds(330, 20, 100, 50);
+        firstWindow.add(username);
+        firstWindow.add(password);
+        firstWindow.add(submit);
+        submit.setFocusPainted(false);
+
+        setLayoutFirstWindow();
+    }
+
     private void setLayoutNieZnanyLekarzFrame(JFrame nieZnanyLekarzFrame) {
         backUp.setBounds(10, 10, 100, 50);
         backUp.setVisible(true);
         backUp.addActionListener(e1 -> setLayoutSecondWindow());
+
+        doctorLabel.setBounds(10,100,100,100);
+        doctorLabel.setVisible(true);
 
         nieZnanyLekarzFrame.setLayout(null);
         nieZnanyLekarzFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -31,10 +46,12 @@ class Layouts extends Variables {
     void setLayoutSecondWindow() {
         setLayout(selectDoctorSpeciality, 335, 70 * nieZnanyLekarzDoctorsList.size() + 45, false);
 
+
         int y = 10;
 
         for (int numOfDoc = 0; numOfDoc < nieZnanyLekarzDoctorsList.size(); numOfDoc++) {
             nieZnanyLekarzSpecjalista[numOfDoc] = new JFrame(nieZnanyLekarzDoctorsList.get(numOfDoc));
+            nieZnanyLekarzSpecjalista[0].add(doctorLabel);
 
             numberOfDoc[numOfDoc] = new JButton();
             numberOfDoc[numOfDoc].setBounds(10, y, 300, 60);
@@ -55,15 +72,5 @@ class Layouts extends Variables {
         setLayout(messageWindow, 300, 100, false);
     }
 
-    void drawLoginScreen() {
-        username.setBounds(10, 10, 300, 30);
-        password.setBounds(10,55, 300, 30);
-        submit.setBounds(330, 20, 100, 50);
-        firstWindow.add(username);
-        firstWindow.add(password);
-        firstWindow.add(submit);
-        submit.setFocusPainted(false);
 
-        setLayoutFirstWindow();
-    }
 }
