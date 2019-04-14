@@ -20,4 +20,7 @@ class Variables {
 
     JButton[] numberOfDoc = new JButton[nieZnanyLekarzDoctorsList.size()];
     JFrame[] nieZnanyLekarzSpecjalista = new JFrame[nieZnanyLekarzDoctorsList.size()];
+
+
+    JLabel doctorLabel = new JLabel("John Smith");
 }
