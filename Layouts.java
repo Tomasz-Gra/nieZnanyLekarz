@@ -4,15 +4,11 @@ import javax.swing.*;
 class Layouts extends Variables {
 
     private void setLayout(JFrame frame, int width, int height, boolean resize) {
-        JPanel panel = new JPanel();
-        JScrollPane scrollBar = new JScrollPane(panel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(width, height);
         frame.setLocationRelativeTo(null);
         frame.setResizable(resize);
-        frame.add(scrollBar);
         frame.setVisible(true);
     }
 
@@ -33,34 +29,24 @@ class Layouts extends Variables {
         setLayout(firstWindow, 470, 130, false);
     }
     void setLayoutSecondWindow() {
-
-        setLayout(selectDoctorSpeciality, 335, 490, false);
+        setLayout(selectDoctorSpeciality, 335, 70 * nieZnanyLekarzDoctorsList.size() + 45, false);
 
         int y = 10;
 
         for (int numOfDoc = 0; numOfDoc < nieZnanyLekarzDoctorsList.size(); numOfDoc++) {
+            nieZnanyLekarzSpecjalista[numOfDoc] = new JFrame(nieZnanyLekarzDoctorsList.get(numOfDoc));
+
             numberOfDoc[numOfDoc] = new JButton();
-            numberOfDoc[numOfDoc].setBounds(10, y, 300, 100);
+            numberOfDoc[numOfDoc].setBounds(10, y, 300, 60);
             numberOfDoc[numOfDoc].setVisible(true);
             numberOfDoc[numOfDoc].setText(nieZnanyLekarzDoctorsList.get(numOfDoc));
             int finalNumOfDoc = numOfDoc;
             numberOfDoc[numOfDoc].addActionListener(e -> {
-                if (numberOfDoc[finalNumOfDoc] == numberOfDoc[0]) {
-                    selectDoctorSpeciality.setVisible(false);
-                    setLayoutNieZnanyLekarzFrame(nieZnanyLekarzInternista);
-                } else if (numberOfDoc[finalNumOfDoc] == numberOfDoc[1]) {
-                    selectDoctorSpeciality.setVisible(false);
-                    setLayoutNieZnanyLekarzFrame(nieZnanyLekarzOnkolog);
-                } else if (numberOfDoc[finalNumOfDoc] == numberOfDoc[2]) {
-                    selectDoctorSpeciality.setVisible(false);
-                    setLayoutNieZnanyLekarzFrame(nieZnanyLekarzPediatra);
-                } else if (numberOfDoc[finalNumOfDoc] == numberOfDoc[3]) {
-                    selectDoctorSpeciality.setVisible(false);
-                    setLayoutNieZnanyLekarzFrame(nieZnanyLekarzGinekolog);
-                }
+                selectDoctorSpeciality.dispose();
+                setLayoutNieZnanyLekarzFrame(nieZnanyLekarzSpecjalista[finalNumOfDoc]);
             });
             selectDoctorSpeciality.add(numberOfDoc[numOfDoc]);
-            y = y + 110;
+            y = y + 70;
         }
 
     }
