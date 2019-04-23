@@ -72,14 +72,14 @@ class Layouts extends Variables {
     }
 
     private void setLayoutInternista() {
-        doctorLabel.setBounds(10,170,100,100);
-        doctorLabel.setVisible(true);
+        nieZnanyLekarzDoctorLabels[0].setBounds(10,170,100,100);
+        nieZnanyLekarzDoctorLabels[0].setVisible(true);
         JButton btnDoc = new JButton();
-        btnDoc.setIcon(imageIcon);
+        //btnDoc.setIcon(imageIcon);
         btnDoc.setBounds(10,10,100,100);
         btnDoc.setVisible(true);
         nieZnanyLekarzSpecjalista[0].add(btnDoc);
-        nieZnanyLekarzSpecjalista[0].add(doctorLabel);
+        nieZnanyLekarzSpecjalista[0].add(nieZnanyLekarzDoctorLabels[0]);
 
     }
 }
