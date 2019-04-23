@@ -13,14 +13,15 @@ class Variables {
     JButton backUp = new JButton("Back");
 
     private String[] userAndPasswordArray = {"admin", "123", "tgrabarczyk@nzl.pl", "tgpass", "mjazdzewska@nzl.pl", "mjpass", "kturski@nzl.pl", "ktpass"};
-    private String[] nieZnanyLekarzDoctors = {"Internista", "Onkolog", "Pediatra", "Ginekolog", "Kardiolog", "Ortopeda", "Urolog"};
+    private String[] nieZnanyLekarzDoctorsArray = {"Internista", "Onkolog", "Pediatra", "Ginekolog", "Kardiolog", "Ortopeda", "Urolog"};
+    private String[] nieZnanyLekarzDoctorsLabelsArray = {"Jan Kowalski", "Anna Kawowa", "Tomasz Sufitowski", "Marcin Palek", "Anna Kalendar"};
 
     List<String> userAndPassword = new ArrayList<>(Arrays.asList(userAndPasswordArray));
-    List<String> nieZnanyLekarzDoctorsList = new ArrayList<>(Arrays.asList(nieZnanyLekarzDoctors));
+    List<String> nieZnanyLekarzDoctorsList = new ArrayList<>(Arrays.asList(nieZnanyLekarzDoctorsArray));
+    List<String> nieZnanyLekarzDoctorsLabelList = new ArrayList<>(Arrays.asList(nieZnanyLekarzDoctorsLabelsArray));
 
     JButton[] numberOfDoc = new JButton[nieZnanyLekarzDoctorsList.size()];
     JFrame[] nieZnanyLekarzSpecjalista = new JFrame[nieZnanyLekarzDoctorsList.size()];
 
-
-    JLabel doctorLabel = new JLabel("John Smith");
+    JLabel[] nieZnanyLekarzDoctorLabels = new JLabel[nieZnanyLekarzDoctorsLabelList.size()];
 }
