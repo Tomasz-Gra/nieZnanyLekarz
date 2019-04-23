@@ -1,4 +1,4 @@
-class DoctorAppointment extends Layouts{
+class DoctorAppointment extends LayoutDoctorSpeciality {
 
     void showLoginScreen() {
         drawLoginScreen();
@@ -6,7 +6,6 @@ class DoctorAppointment extends Layouts{
         submit.addActionListener(e -> {
             for (int i = 0; i < userAndPassword.size(); i = i + 2) {
                 if ((username.getText().equals(userAndPassword.get(i)) && password.getText().equals(userAndPassword.get(i + 1)))) {
-                    setLayoutMessageWindow();
                     setLayoutSecondWindow();
                     firstWindow.dispose();
                 /*
