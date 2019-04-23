@@ -1,3 +1,5 @@
+package nieZnanyLekarz;
+
 import javax.swing.*;
 
 class LayoutDoctorSpeciality extends LayoutIndividualDoctor {

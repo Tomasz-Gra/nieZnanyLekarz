@@ -1,3 +1,5 @@
+package nieZnanyLekarz;
+
 class DoctorAppointment extends LayoutDoctorSpeciality {
 
     void showLoginScreen() {

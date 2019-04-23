@@ -1,3 +1,5 @@
+package nieZnanyLekarz;
+
 class LayoutLoginScreen extends Layouts {
 
     private void setLayoutFirstWindow() {
