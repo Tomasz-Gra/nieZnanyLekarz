@@ -6,39 +6,41 @@ import java.util.Arrays;
 import java.util.List;
 
 class Variables {
-    JFrame firstWindow = new JFrame("Login to nieZnany Lekarz");
-    JFrame selectDoctorSpeciality = new JFrame("Doctor speciality - nieZnany Lekarz");
-    JTextField username = new JTextField("admin");
-    JPasswordField password = new JPasswordField("123");
-    JButton submit = new JButton("Log in");
-    JButton backUp = new JButton("Back");
+    JFrame frame_loginScreen = new JFrame("Login to nieZnany Lekarz");
+    JFrame frame_selectDoctorSpeciality = new JFrame("Doctor speciality - nieZnany Lekarz");
+    JTextField textField_username = new JTextField("admin");
+    JPasswordField textField_password = new JPasswordField("123");
+    JButton button_submit = new JButton("Log in");
+    JButton button_backUp = new JButton("Back");
 
-    private String[] userAndPasswordArray = {"admin", "123", "tgrabarczyk@nzl.pl", "tgpass", "mjazdzewska@nzl.pl", "mjpass", "kturski@nzl.pl", "ktpass"};
-    private String[] nieZnanyLekarzDoctorsArray = {"Internista", "Onkolog", "Pediatra", "Ginekolog"};
-    List<String> userAndPassword = new ArrayList<>(Arrays.asList(userAndPasswordArray));
-    List<String> nieZnanyLekarzDoctorsList = new ArrayList<>(Arrays.asList(nieZnanyLekarzDoctorsArray));
+    private String[] array_userAndPassword = {"admin", "123", "tgrabarczyk@nzl.pl", "tgpass", "mjazdzewska@nzl.pl", "mjpass", "kturski@nzl.pl", "ktpass"};
+    List<String> list_userAndPassword = new ArrayList<>(Arrays.asList(array_userAndPassword));
+
+    String[] array_nieZnanyLekarzDoctors = {"Internist", "Oncologist", "Cardiologist"};
+    List<String> list_nieZnanyLekarzDoctors = new ArrayList<>(Arrays.asList(array_nieZnanyLekarzDoctors));
+
+    JButton[] button_doctorSpecialization = new JButton[list_nieZnanyLekarzDoctors.size()];
+    JFrame[] frame_nieZnanyLekarzSpecialist = new JFrame[list_nieZnanyLekarzDoctors.size()];
+
+    String[] array_internistIcons = {"nieZnanyLekarz/doctorPictures/internista1st.jpg", "nieZnanyLekarz/doctorPictures/internista2nd.jpg", "nieZnanyLekarz/doctorPictures/pediatra1st.jpg", "nieZnanyLekarz/doctorPictures/pediatra2nd.jpg", "nieZnanyLekarz/doctorPictures/onkolog1st.jpg"};
+    private String[] array_internistaNames = {"Jan Smith", "Pawel Smith", "Marcin Smith", "Grzegorz Smith", "Krystian Smith"};
+    List<String> list_internistaNames = new ArrayList<>(Arrays.asList(array_internistaNames));
+    JLabel[] label_internistaNames = new JLabel[list_internistaNames.size()];
+    JButton[] button_internistaNames = new JButton[list_internistaNames.size()];
+
+    String[] array_oncologistIcons = {"nieZnanyLekarz/doctorPictures/onkolog1st.jpg", "nieZnanyLekarz/doctorPictures/onkolog2nd.jpg"};
+    private String[] array_onkologNames = {"Aleksander Smith", "Adam Smith"};
+    List<String> list_onkologNames = new ArrayList<>(Arrays.asList(array_onkologNames));
+    JLabel[] label_onkologNames = new JLabel[list_onkologNames.size()];
+    JButton[] button_onkologNames = new JButton[list_onkologNames.size()];
 
 
-    private String[] labelsArrayInternista = {"Jan Internista", "Anna Internista"};
-    List<String> labelListInternista = new ArrayList<>(Arrays.asList(labelsArrayInternista));
-
-    private String[] labelsArrayOnkolog = {"Jan Onkolog", "Anna Onkolog"};
-    List<String> labelListOnkolog = new ArrayList<>(Arrays.asList(labelsArrayOnkolog));
-
-    private String[] labelsArrayPediatra = {"Jan Pediatra", "Anna Pediatra"};
-    List<String> labelListPediatra = new ArrayList<>(Arrays.asList(labelsArrayPediatra));
-
-    private String[] labelsArrayGinekolog = {"Jan Ginekolog", "Anna Ginekolog"};
-    List<String> labelListGinekolog = new ArrayList<>(Arrays.asList(labelsArrayGinekolog));
-
-    JButton[] numberOfDoc = new JButton[nieZnanyLekarzDoctorsList.size()];
-    JFrame[] nieZnanyLekarzSpecjalista = new JFrame[nieZnanyLekarzDoctorsList.size()];
 
 
 
-    JLabel[] labelsInternista = new JLabel[labelListInternista.size()];
-    JLabel[] labelsOnkolog = new JLabel[labelListOnkolog.size()];
-    JLabel[] labelsPediatra = new JLabel[labelListPediatra.size()];
-    JLabel[] labelsGinekolog = new JLabel[labelListGinekolog.size()];
+
+
+
+
 
 }

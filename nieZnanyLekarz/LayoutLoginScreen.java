@@ -2,20 +2,16 @@ package nieZnanyLekarz;
 
 class LayoutLoginScreen extends Layouts {
 
-    private void setLayoutFirstWindow() {
-        setLayout(firstWindow, 470, 130, false);
-    }
-
     void drawLoginScreen() {
-        username.setBounds(10, 10, 300, 30);
-        password.setBounds(10,55, 300, 30);
-        submit.setBounds(330, 20, 100, 50);
-        firstWindow.add(username);
-        firstWindow.add(password);
-        firstWindow.add(submit);
-        submit.setFocusPainted(false);
+        textField_username.setBounds(10, 10, 300, 30);
+        textField_password.setBounds(10,55, 300, 30);
+        button_submit.setBounds(330, 20, 100, 50);
+        frame_loginScreen.add(textField_username);
+        frame_loginScreen.add(textField_password);
+        frame_loginScreen.add(button_submit);
+        button_submit.setFocusPainted(false);
 
-        setLayout(firstWindow, 470, 130, false);
+        setGeneralLayout(frame_loginScreen, 470, 130);
     }
 
 }
