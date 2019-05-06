@@ -1,59 +1,79 @@
 package nieZnanyLekarz;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.List;
 
 class LayoutIndividualDoctor extends LayoutLoginScreen {
 
-    private void addLabelsAndButtonsForIndividualDoctor(List<String> individualDoctorName, JLabel[] doctorLabel, int doctorSpeciality, JButton[] doctorButton) {
-
-        int xPosition = 10; // set position of X axis
-
-        for (int labelAndButtonIterator = 0; labelAndButtonIterator < individualDoctorName.size(); labelAndButtonIterator++) {
-            doctorLabel[labelAndButtonIterator] = new JLabel();
-            doctorLabel[labelAndButtonIterator].setBounds(xPosition, 10, 100, 20);
-            doctorLabel[labelAndButtonIterator].setHorizontalAlignment(SwingConstants.CENTER);
-            doctorLabel[labelAndButtonIterator].setVisible(true);
-            doctorLabel[labelAndButtonIterator].setText(individualDoctorName.get(labelAndButtonIterator));
-
-            doctorButton[labelAndButtonIterator] = new JButton();
-            doctorButton[labelAndButtonIterator].setBounds(xPosition, 40, 100, 100);
-            doctorButton[labelAndButtonIterator].setVisible(true);
-
-            frame_nieZnanyLekarzSpecialist[doctorSpeciality].add(doctorLabel[labelAndButtonIterator]);
-            frame_nieZnanyLekarzSpecialist[doctorSpeciality].add(doctorButton[labelAndButtonIterator]);
-
-            xPosition += 110;
+    private void addDates (JButton[] dateButton, List<String> dateList, JFrame dateFrame) {
+        for (int i = 0; i < dateList.size(); i++) {
+            dateButton[i] = new JButton();
+            dateButton[i].setFocusPainted(false);
+            dateButton[i].setVisible(true);
+            dateButton[i].setText(dateList.get(i));
+            dateFrame.add(dateButton[i]);
         }
     }
 
+    private void addCalendarsForDoctors(List<String> doctorList, JFrame doctorFrame, JButton[] arrayDoctorButton, int doctorNumber, int arrayDoctorSpecialization, JButton[] datesForDoctor) {
+        addDates(datesForDoctor, doctorList, doctorFrame);
+        arrayDoctorButton[doctorNumber].addActionListener(e -> {
+                    frame_nieZnanyLekarzSpecialist[arrayDoctorSpecialization].dispose();
+                    setDateLayout(doctorFrame, 300, 50 * doctorList.size(), doctorList.size());
+                }
+
+        );
+    }
+
+    private void addButtonsForIndividualDoctor(List<String> individualDoctorName, List<String> individualDoctorIcon, int doctorSpeciality, JButton[] doctorButton) {
+
+        for (int buttonIterator = 0; buttonIterator < individualDoctorName.size(); buttonIterator ++) {
+            doctorButton[buttonIterator] = new JButton();
+            doctorButton[buttonIterator].setVisible(true);
+            doctorButton[buttonIterator].setToolTipText(individualDoctorName.get(buttonIterator));
+
+            Icon icon_internist = new ImageIcon(individualDoctorIcon.get(buttonIterator));
+            doctorButton[buttonIterator].setIcon(icon_internist);
+
+            frame_nieZnanyLekarzSpecialist[doctorSpeciality].add(doctorButton[buttonIterator]);
+        }
+    }
+
+
     private void setLayoutDoctors() {
-        addLabelsAndButtonsForIndividualDoctor(list_internistaNames, label_internistaNames, 0, button_internistaNames);
-        addLabelsAndButtonsForIndividualDoctor(list_onkologNames, label_onkologNames, 1, button_onkologNames);
+        addButtonsForIndividualDoctor(list_internistsNames, list_internistsIcons, 0, button_internistsNames);
+        addButtonsForIndividualDoctor(list_oncologistsNames, list_oncologistsIcons, 1, button_oncologistsNames);
+        addButtonsForIndividualDoctor(list_cardiologistsNames, list_cardiologistsIcons, 2, button_cardiologistsNames);
 
-        for (int internistIterator = 0; internistIterator < button_internistaNames.length; internistIterator++) {
-            Icon icon_internist = new ImageIcon(array_internistIcons[internistIterator]);
-            button_internistaNames[internistIterator].setIcon(icon_internist);
 
-            int finalI = internistIterator + 1;
-            button_internistaNames[internistIterator].addActionListener(e -> JOptionPane.showMessageDialog(null, finalI + "." + " Internist Calendar", "Calendar: ", JOptionPane.INFORMATION_MESSAGE));
-        }
+        addCalendarsForDoctors(list_datesFirstInternist, frame_dates_firstInternist, button_internistsNames, 0,0, button_dates_firstInternist);
+        addCalendarsForDoctors(list_datesSecondInternist, frame_dates_secondInternist, button_internistsNames, 1,0, button_dates_secondInternist);
+        addCalendarsForDoctors(list_datesThirdInternist, frame_dates_thirdInternist, button_internistsNames, 2,0, button_dates_thirdInternist);
+        addCalendarsForDoctors(list_datesFourthInternist, frame_dates_fourthInternist, button_internistsNames, 3,0, button_dates_fourthInternist);
 
-        for (int oncologistIterator = 0; oncologistIterator < button_onkologNames.length; oncologistIterator++) {
-            Icon icon_internist = new ImageIcon(array_oncologistIcons[oncologistIterator]);
-            button_onkologNames[oncologistIterator].setIcon(icon_internist);
+        addCalendarsForDoctors(list_datesFirstOncologist, frame_dates_firstOncologist, button_oncologistsNames, 0,1, button_dates_firstOncologist);
+        addCalendarsForDoctors(list_datesSecondOncologist, frame_dates_secondOncologist, button_oncologistsNames, 1,1, button_dates_secondOncologist);
+        addCalendarsForDoctors(list_datesThirdOncologist, frame_dates_thirdOncologist, button_oncologistsNames, 2,1, button_dates_thirdOncologist);
+        addCalendarsForDoctors(list_datesFourthOncologist, frame_dates_fourthOncologist, button_oncologistsNames, 3,1, button_dates_fourthOncologist);
 
-            int finalI = oncologistIterator + 1;
-            button_onkologNames[oncologistIterator].addActionListener(e -> JOptionPane.showMessageDialog(null, finalI + "." + " Oncologist Calendar", "Calendar: ", JOptionPane.INFORMATION_MESSAGE));
-        }
+
+        addCalendarsForDoctors(list_datesFirstCardiologist, frame_dates_firstCardiologist, button_cardiologistsNames, 0,2, button_dates_firstCardiologist);
+        addCalendarsForDoctors(list_datesSecondCardiologist, frame_dates_secondCardiologist, button_cardiologistsNames, 1,2, button_dates_secondCardiologist);
+        addCalendarsForDoctors(list_datesThirdCardiologist, frame_dates_thirdCardiologist, button_cardiologistsNames, 2,2, button_dates_thirdCardiologist);
+        addCalendarsForDoctors(list_datesFourthCardiologist, frame_dates_fourthCardiologist, button_cardiologistsNames, 3,2, button_dates_fourthCardiologist);
+
     }
 
     void setLayoutNieZnanyLekarzFrame(JFrame nieZnanyLekarzFrame, List<String> doctorNamesList) {
-        setLayoutDoctors();
+        if(!setLayoutDoctorsAlreadyExecuted) { // prevent doing it in loop (adding buttons every time Back Up is clicked)
+            setLayoutDoctors();
+            setLayoutDoctorsAlreadyExecuted = true;
+        }
 
-        nieZnanyLekarzFrame.setLayout(null);
+        nieZnanyLekarzFrame.setLayout(new GridLayout(1,1));
         nieZnanyLekarzFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        nieZnanyLekarzFrame.setSize(115 * doctorNamesList.size() + 15, 260);
+        nieZnanyLekarzFrame.setSize(105 * doctorNamesList.size() + 105, 140);
         nieZnanyLekarzFrame.setLocationRelativeTo(null);
         nieZnanyLekarzFrame.add(button_backUp);
         nieZnanyLekarzFrame.setVisible(true);
