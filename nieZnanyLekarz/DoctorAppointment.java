@@ -1,8 +1,10 @@
 package nieZnanyLekarz;
 
+import java.io.IOException;
+
 class DoctorAppointment extends LayoutDoctorSpeciality {
 
-    void showLoginScreen() {
+    void showLoginScreen() throws IOException {
         drawLoginScreen();
 
         button_submit.addActionListener(e -> {

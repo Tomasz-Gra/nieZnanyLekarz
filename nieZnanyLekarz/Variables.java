@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class LoginScreen {
+class LoginScreen extends BufferedReaderClass{
+
     private String[] array_userAndPassword          = {
                                                         "admin", "123",
                                                         "tgrabarczyk@nzl.pl", "tgpass",
@@ -26,26 +27,15 @@ class AllDoctors extends LoginScreen {
     JFrame[] frame_nieZnanyLekarzSpecialist         = new JFrame[list_nieZnanyLekarzDoctors.size()];
 } // All doctors specializations
 class Internists extends AllDoctors{
-    private String[] array_internistsNames          = {
-                                                        "Internist 1 - Jan Smith",
-                                                        "Internist 2 - Pawel Smith",
-                                                        "Internist 3 - Marcin Smith",
-                                                        "Internist 4 - Grzegorz Smith",
-                                                        };
-    List<String> list_internistsNames               = new ArrayList<>(Arrays.asList(array_internistsNames));
-
     private String[] array_internistsIcons          = {
                                                         "nieZnanyLekarz/doctorPictures/ginekolog1st.jpg",
                                                         "nieZnanyLekarz/doctorPictures/ginekolog2nd.jpg",
                                                         "nieZnanyLekarz/doctorPictures/internista1st.jpg",
                                                         "nieZnanyLekarz/doctorPictures/internista2nd.jpg"
                                                         };
+
+
     List<String> list_internistsIcons               = new ArrayList<>(Arrays.asList(array_internistsIcons));
-
-    JButton[] button_internistsNames                = new JButton[list_internistsNames.size()];
-
-
-
 } // Internists Information
 class DatesInternist extends Internists {
     private String[] array_datesFirstInternist      = {
@@ -112,14 +102,6 @@ class DatesInternist extends Internists {
 
 }
 class Oncologists extends DatesInternist{
-    private String[] array_oncologistsNames         = {
-                                                        "Oncologist 1 - Marcin Smith",
-                                                        "Oncologist 2 - Grzegorz Smith",
-                                                        "Oncologist 3 - Krystian Smith",
-                                                        "Oncologist 4 - Adrian Smith",
-                                                        };
-    List<String> list_oncologistsNames              = new ArrayList<>(Arrays.asList(array_oncologistsNames));
-
     private String[] array_oncologistsIcons         = {
                                                         "nieZnanyLekarz/doctorPictures/internista1st.jpg",
                                                         "nieZnanyLekarz/doctorPictures/internista2nd.jpg",
@@ -128,7 +110,6 @@ class Oncologists extends DatesInternist{
                                                         };
     List<String> list_oncologistsIcons              = new ArrayList<>(Arrays.asList(array_oncologistsIcons));
 
-    JButton[] button_oncologistsNames               = new JButton[list_oncologistsNames.size()];
 } // Oncologists Information
 class DatesOncologists extends Oncologists {
     private String[] array_datesFirstOncologist     = {
@@ -193,14 +174,6 @@ class DatesOncologists extends Oncologists {
     JButton[] button_datesFourthOncologist = new JButton[list_datesFourthOncologist.size()];
 }
 class Cardiologists extends DatesOncologists {
-    private String[] array_cardiologistsNames       = {
-                                                        "Cardiologist 1 - Krystian Smith",
-                                                        "Cardiologist 2 - Adrian Smith",
-                                                        "Cardiologist 3 - Katarzyna Smith",
-                                                        "Cardiologist 4 - Sonia Smith"
-                                                        };
-    List<String> list_cardiologistsNames            = new ArrayList<>(Arrays.asList(array_cardiologistsNames));
-
     private String[] array_cardiologistsIcons       = {
                                                         "nieZnanyLekarz/doctorPictures/onkolog1st.jpg",
                                                         "nieZnanyLekarz/doctorPictures/onkolog2nd.jpg",
@@ -208,8 +181,6 @@ class Cardiologists extends DatesOncologists {
                                                         "nieZnanyLekarz/doctorPictures/pediatra2nd.jpg"
                                                         };
     List<String> list_cardiologistsIcons            = new ArrayList<>(Arrays.asList(array_cardiologistsIcons));
-
-    JButton[] button_cardiologistsNames             = new JButton[list_cardiologistsNames.size()];
 } // Cardiologists Information
 class DatesCardiologists extends Cardiologists {
     private String[] array_datesFirstCardiologist   = {
@@ -278,9 +249,9 @@ class CreateListOfDoctorNames extends DatesCardiologists {
     List<List<String>> listOfDoctorNames = new ArrayList<>();
 
     void createListOfDoctorNames() {
-        listOfDoctorNames.add(list_internistsNames);
-        listOfDoctorNames.add(list_oncologistsNames);
-        listOfDoctorNames.add(list_cardiologistsNames);
+        listOfDoctorNames.add(list_internistNames);
+        listOfDoctorNames.add(list_oncologistNames);
+        listOfDoctorNames.add(list_cardiologistNames);
     }
 
 }

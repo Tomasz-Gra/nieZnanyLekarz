@@ -1,4 +1,4 @@
 Internist 1 - Jan Smith
 Internist 2 - Pawel Smith
-Internist 3 - Marcin Smith
-Internist 4 - Grzegorz Smith
+Marcin Smith
+Grzegorz Smith

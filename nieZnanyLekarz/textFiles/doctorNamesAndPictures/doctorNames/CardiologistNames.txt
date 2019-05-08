@@ -1,4 +1,4 @@
-Cardiologist 1 - Krystian Smith
+Krystian Smith
 Cardiologist 2 - Adrian Smith
-Cardiologist 3 - Katarzyna Smith
+Katarzyna Smith
 Cardiologist 4 - Sonia Smith

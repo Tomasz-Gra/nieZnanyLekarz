@@ -61,9 +61,13 @@ class LayoutIndividualDoctor extends LayoutLoginScreen {
 
 
     void setLayoutDoctors() {
-        addButtonsForIndividualDoctor(list_internistsNames, list_internistsIcons, 0, button_internistsNames);
-        addButtonsForIndividualDoctor(list_oncologistsNames, list_oncologistsIcons, 1, button_oncologistsNames);
-        addButtonsForIndividualDoctor(list_cardiologistsNames, list_cardiologistsIcons, 2, button_cardiologistsNames);
+        JButton[] button_internistsNames                = new JButton[list_internistNames.size()];
+        JButton[] button_oncologistsNames               = new JButton[list_oncologistNames.size()];
+        JButton[] button_cardiologistsNames             = new JButton[list_cardiologistNames.size()];
+
+        addButtonsForIndividualDoctor(list_internistNames, list_internistsIcons, 0, button_internistsNames);
+        addButtonsForIndividualDoctor(list_oncologistNames, list_oncologistsIcons, 1, button_oncologistsNames);
+        addButtonsForIndividualDoctor(list_cardiologistNames, list_cardiologistsIcons, 2, button_cardiologistsNames);
 
 
         addCalendarsForDoctors(list_datesFirstInternist, frame_datesFirstInternist, button_internistsNames, 0,0, button_datesFirstInternist);
