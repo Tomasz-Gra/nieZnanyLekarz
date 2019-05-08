@@ -66,20 +66,20 @@ class LayoutIndividualDoctor extends LayoutLoginScreen {
         addButtonsForIndividualDoctor(list_cardiologistsNames, list_cardiologistsIcons, 2, button_cardiologistsNames);
 
 
-        addCalendarsForDoctors(list_datesFirstInternist, frame_dates_firstInternist, button_internistsNames, 0,0, button_dates_firstInternist);
-        addCalendarsForDoctors(list_datesSecondInternist, frame_dates_secondInternist, button_internistsNames, 1,0, button_dates_secondInternist);
-        addCalendarsForDoctors(list_datesThirdInternist, frame_dates_thirdInternist, button_internistsNames, 2,0, button_dates_thirdInternist);
-        addCalendarsForDoctors(list_datesFourthInternist, frame_dates_fourthInternist, button_internistsNames, 3,0, button_dates_fourthInternist);
+        addCalendarsForDoctors(list_datesFirstInternist, frame_datesFirstInternist, button_internistsNames, 0,0, button_datesFirstInternist);
+        addCalendarsForDoctors(list_datesSecondInternist, frame_datesSecondInternist, button_internistsNames, 1,0, button_datesSecondInternist);
+        addCalendarsForDoctors(list_datesThirdInternist, frame_datesThirdInternist, button_internistsNames, 2,0, button_datesThirdInternist);
+        addCalendarsForDoctors(list_datesFourthInternist, frame_datesFourthInternist, button_internistsNames, 3,0, button_datesFourthInternist);
 
-        addCalendarsForDoctors(list_datesFirstOncologist, frame_dates_firstOncologist, button_oncologistsNames, 0,1, button_dates_firstOncologist);
-        addCalendarsForDoctors(list_datesSecondOncologist, frame_dates_secondOncologist, button_oncologistsNames, 1,1, button_dates_secondOncologist);
-        addCalendarsForDoctors(list_datesThirdOncologist, frame_dates_thirdOncologist, button_oncologistsNames, 2,1, button_dates_thirdOncologist);
-        addCalendarsForDoctors(list_datesFourthOncologist, frame_dates_fourthOncologist, button_oncologistsNames, 3,1, button_dates_fourthOncologist);
+        addCalendarsForDoctors(list_datesFirstOncologist, frame_datesFirstOncologist, button_oncologistsNames, 0,1, button_datesFirstOncologist);
+        addCalendarsForDoctors(list_datesSecondOncologist, frame_datesSecondOncologist, button_oncologistsNames, 1,1, button_datesSecondOncologist);
+        addCalendarsForDoctors(list_datesThirdOncologist, frame_datesThirdOncologist, button_oncologistsNames, 2,1, button_datesThirdOncologist);
+        addCalendarsForDoctors(list_datesFourthOncologist, frame_datesFourthOncologist, button_oncologistsNames, 3,1, button_datesFourthOncologist);
 
-        addCalendarsForDoctors(list_datesFirstCardiologist, frame_dates_firstCardiologist, button_cardiologistsNames, 0,2, button_dates_firstCardiologist);
-        addCalendarsForDoctors(list_datesSecondCardiologist, frame_dates_secondCardiologist, button_cardiologistsNames, 1,2, button_dates_secondCardiologist);
-        addCalendarsForDoctors(list_datesThirdCardiologist, frame_dates_thirdCardiologist, button_cardiologistsNames, 2,2, button_dates_thirdCardiologist);
-        addCalendarsForDoctors(list_datesFourthCardiologist, frame_dates_fourthCardiologist, button_cardiologistsNames, 3,2, button_dates_fourthCardiologist);
+        addCalendarsForDoctors(list_datesFirstCardiologist, frame_datesFirstCardiologist, button_cardiologistsNames, 0,2, button_datesFirstCardiologist);
+        addCalendarsForDoctors(list_datesSecondCardiologist, frame_datesSecondCardiologist, button_cardiologistsNames, 1,2, button_datesSecondCardiologist);
+        addCalendarsForDoctors(list_datesThirdCardiologist, frame_datesThirdCardiologist, button_cardiologistsNames, 2,2, button_datesThirdCardiologist);
+        addCalendarsForDoctors(list_datesFourthCardiologist, frame_datesFourthCardiologist, button_cardiologistsNames, 3,2, button_datesFourthCardiologist);
 
     }
 }

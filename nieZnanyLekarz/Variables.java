@@ -60,8 +60,8 @@ class DatesInternist extends Internists {
                                                         "10.05.2019"
                                                         };
     List<String> list_datesFirstInternist           = new ArrayList<>(Arrays.asList(array_datesFirstInternist));
-    JFrame frame_dates_firstInternist               = new JFrame("Calendar First Internist");
-    JButton[] button_dates_firstInternist           = new JButton[list_datesFirstInternist.size()];
+    JFrame frame_datesFirstInternist = new JFrame("Calendar First Internist");
+    JButton[] button_datesFirstInternist = new JButton[list_datesFirstInternist.size()];
 
 
     private String[] array_datesSecondInternist     = {
@@ -72,8 +72,8 @@ class DatesInternist extends Internists {
                                                         "06.05.2019",
                                                         };
     List<String> list_datesSecondInternist          = new ArrayList<>(Arrays.asList(array_datesSecondInternist));
-    JFrame frame_dates_secondInternist              = new JFrame("Calendar Second Internist");
-    JButton[] button_dates_secondInternist          = new JButton[list_datesSecondInternist.size()];
+    JFrame frame_datesSecondInternist = new JFrame("Calendar Second Internist");
+    JButton[] button_datesSecondInternist = new JButton[list_datesSecondInternist.size()];
 
 
     private String[] array_datesThirdInternist      = {
@@ -87,8 +87,8 @@ class DatesInternist extends Internists {
                                                         "19.05.2019"
                                                         };
     List<String> list_datesThirdInternist           = new ArrayList<>(Arrays.asList(array_datesThirdInternist));
-    JFrame frame_dates_thirdInternist               = new JFrame("Calendar Third Internist");
-    JButton[] button_dates_thirdInternist           = new JButton[list_datesThirdInternist.size()];
+    JFrame frame_datesThirdInternist = new JFrame("Calendar Third Internist");
+    JButton[] button_datesThirdInternist = new JButton[list_datesThirdInternist.size()];
 
     private String[] array_datesFourthInternist     = {
                                                         "Back up",
@@ -106,8 +106,8 @@ class DatesInternist extends Internists {
                                                         "27.05.2019"
                                                         };
     List<String> list_datesFourthInternist          = new ArrayList<>(Arrays.asList(array_datesFourthInternist));
-    JFrame frame_dates_fourthInternist              = new JFrame("Calendar Fourth Internist");
-    JButton[] button_dates_fourthInternist          = new JButton[list_datesFourthInternist.size()];
+    JFrame frame_datesFourthInternist = new JFrame("Calendar Fourth Internist");
+    JButton[] button_datesFourthInternist = new JButton[list_datesFourthInternist.size()];
 
 
 }
@@ -143,8 +143,8 @@ class DatesOncologists extends Oncologists {
                                                         "10.05.2019"
                                                         };
     List<String> list_datesFirstOncologist          = new ArrayList<>(Arrays.asList(array_datesFirstOncologist));
-    JFrame frame_dates_firstOncologist              = new JFrame("Calendar First Oncologist");
-    JButton[] button_dates_firstOncologist          = new JButton[list_datesFirstOncologist.size()];
+    JFrame frame_datesFirstOncologist = new JFrame("Calendar First Oncologist");
+    JButton[] button_datesFirstOncologist = new JButton[list_datesFirstOncologist.size()];
 
 
     private String[] array_datesSecondOncologist    = {
@@ -155,8 +155,8 @@ class DatesOncologists extends Oncologists {
                                                         "06.05.2019",
                                                         };
     List<String> list_datesSecondOncologist         = new ArrayList<>(Arrays.asList(array_datesSecondOncologist));
-    JFrame frame_dates_secondOncologist             = new JFrame("Calendar Second Oncologist");
-    JButton[] button_dates_secondOncologist         = new JButton[list_datesSecondOncologist.size()];
+    JFrame frame_datesSecondOncologist = new JFrame("Calendar Second Oncologist");
+    JButton[] button_datesSecondOncologist = new JButton[list_datesSecondOncologist.size()];
 
 
     private String[] array_datesThirdOncologist     = {
@@ -170,8 +170,8 @@ class DatesOncologists extends Oncologists {
                                                         "19.05.2019"
                                                         };
     List<String> list_datesThirdOncologist          = new ArrayList<>(Arrays.asList(array_datesThirdOncologist));
-    JFrame frame_dates_thirdOncologist              = new JFrame("Calendar Third Oncologist");
-    JButton[] button_dates_thirdOncologist          = new JButton[list_datesThirdOncologist.size()];
+    JFrame frame_datesThirdOncologist = new JFrame("Calendar Third Oncologist");
+    JButton[] button_datesThirdOncologist = new JButton[list_datesThirdOncologist.size()];
 
     private String[] array_datesFourthOncologist    = {
                                                         "Back up",
@@ -189,8 +189,8 @@ class DatesOncologists extends Oncologists {
                                                         "27.05.2019"
                                                         };
     List<String> list_datesFourthOncologist         = new ArrayList<>(Arrays.asList(array_datesFourthOncologist));
-    JFrame frame_dates_fourthOncologist             = new JFrame("Calendar Fourth Oncologist");
-    JButton[] button_dates_fourthOncologist         = new JButton[list_datesFourthOncologist.size()];
+    JFrame frame_datesFourthOncologist = new JFrame("Calendar Fourth Oncologist");
+    JButton[] button_datesFourthOncologist = new JButton[list_datesFourthOncologist.size()];
 }
 class Cardiologists extends DatesOncologists {
     private String[] array_cardiologistsNames       = {
@@ -224,8 +224,8 @@ class DatesCardiologists extends Cardiologists {
                                                         "10.05.2019"
                                                         };
     List<String> list_datesFirstCardiologist        = new ArrayList<>(Arrays.asList(array_datesFirstCardiologist));
-    JFrame frame_dates_firstCardiologist            = new JFrame("Calendar First Cardiologist");
-    JButton[] button_dates_firstCardiologist        = new JButton[list_datesFirstCardiologist.size()];
+    JFrame frame_datesFirstCardiologist = new JFrame("Calendar First Cardiologist");
+    JButton[] button_datesFirstCardiologist = new JButton[list_datesFirstCardiologist.size()];
 
 
     private String[] array_datesSecondCardiologist  = {
@@ -236,8 +236,8 @@ class DatesCardiologists extends Cardiologists {
                                                         "06.05.2019",
                                                         };
     List<String> list_datesSecondCardiologist       = new ArrayList<>(Arrays.asList(array_datesSecondCardiologist));
-    JFrame frame_dates_secondCardiologist           = new JFrame("Calendar Second Cardiologist");
-    JButton[] button_dates_secondCardiologist       = new JButton[list_datesSecondCardiologist.size()];
+    JFrame frame_datesSecondCardiologist = new JFrame("Calendar Second Cardiologist");
+    JButton[] button_datesSecondCardiologist = new JButton[list_datesSecondCardiologist.size()];
 
 
     private String[] array_datesThirdCardiologist   = {
@@ -251,8 +251,8 @@ class DatesCardiologists extends Cardiologists {
                                                         "19.05.2019"
                                                         };
     List<String> list_datesThirdCardiologist        = new ArrayList<>(Arrays.asList(array_datesThirdCardiologist));
-    JFrame frame_dates_thirdCardiologist            = new JFrame("Calendar Third Cardiologist");
-    JButton[] button_dates_thirdCardiologist        = new JButton[list_datesThirdCardiologist.size()];
+    JFrame frame_datesThirdCardiologist = new JFrame("Calendar Third Cardiologist");
+    JButton[] button_datesThirdCardiologist = new JButton[list_datesThirdCardiologist.size()];
 
     private String[] array_datesFourthCardiologist  = {
                                                         "Back up",
@@ -270,11 +270,21 @@ class DatesCardiologists extends Cardiologists {
                                                         "27.05.2019"
                                                         };
     List<String> list_datesFourthCardiologist       = new ArrayList<>(Arrays.asList(array_datesFourthCardiologist));
-    JFrame frame_dates_fourthCardiologist           = new JFrame("Calendar Fourth Cardiologist");
-    JButton[] button_dates_fourthCardiologist       = new JButton[list_datesFourthCardiologist.size()];
+    JFrame frame_datesFourthCardiologist = new JFrame("Calendar Fourth Cardiologist");
+    JButton[] button_datesFourthCardiologist = new JButton[list_datesFourthCardiologist.size()];
 
 }
-class Variables extends DatesCardiologists {
+class CreateListOfDoctorNames extends DatesCardiologists {
+    List<List<String>> listOfDoctorNames = new ArrayList<>();
+
+    void createListOfDoctorNames() {
+        listOfDoctorNames.add(list_internistsNames);
+        listOfDoctorNames.add(list_oncologistsNames);
+        listOfDoctorNames.add(list_cardiologistsNames);
+    }
+
+}
+class Variables extends CreateListOfDoctorNames {
     JFrame frame_loginScreen                        = new JFrame("Login to nieZnany Lekarz");
     JFrame frame_selectDoctorSpeciality             = new JFrame("Doctor speciality - nieZnany Lekarz");
 
@@ -283,11 +293,6 @@ class Variables extends DatesCardiologists {
     JButton button_submit                           = new JButton("Log in");
     JButton button_backUp                           = new JButton("Back");
 
-    JButton button_backUp2                           = new JButton("Back");
-
-
     boolean setLayoutDocSpecialityAlreadyExecuted   = false;
     boolean setLayoutDoctorsAlreadyExecuted         = false;
-
-
 } // Other Variables

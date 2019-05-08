@@ -51,24 +51,16 @@ class LayoutDoctorSpeciality extends LayoutIndividualDoctor {
         }
 
         // Set layouts for specializations
-        //TODO: Refactor code
-        button_doctorSpecialization[0].addActionListener(e -> {
-            frame_selectDoctorSpeciality.dispose();
-            setLayoutNieZnanyLekarzFrame(frame_nieZnanyLekarzSpecialist[0], list_internistsNames);
-            backUpButton();
-        });
+        createListOfDoctorNames();
 
-        button_doctorSpecialization[1].addActionListener(e -> {
-            frame_selectDoctorSpeciality.dispose();
-            setLayoutNieZnanyLekarzFrame(frame_nieZnanyLekarzSpecialist[1], list_oncologistsNames);
-            backUpButton();
-        });
-
-        button_doctorSpecialization[2].addActionListener(e -> {
-            frame_selectDoctorSpeciality.dispose();
-            setLayoutNieZnanyLekarzFrame(frame_nieZnanyLekarzSpecialist[2], list_cardiologistsNames);
-            backUpButton();
-        });
+        for (int i = 0; i < 3; i++) {
+            int finalI = i;
+            button_doctorSpecialization[i].addActionListener(e -> {
+                frame_selectDoctorSpeciality.dispose();
+                setLayoutNieZnanyLekarzFrame(frame_nieZnanyLekarzSpecialist[finalI], listOfDoctorNames.get(finalI));
+                backUpButton();
+            });
+        }
 
     }
 }
